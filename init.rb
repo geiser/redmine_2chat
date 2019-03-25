@@ -19,6 +19,7 @@ reloader.to_prepare do
 
   Redmine2chat.register_platform('slack', Redmine2chat::Platforms::Slack.new)
   Redmine2chat.register_platform('telegram', Redmine2chat::Platforms::Telegram.new)
+  Redmine2chat.register_platform('twilio', Redmine2chat::Platforms::Twilio.new)
 
   RedmineBots::Slack::Bot.register_handlers Redmine2chat::Platforms::Slack::MessageHandler
 
